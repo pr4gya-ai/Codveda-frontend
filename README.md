@@ -47,5 +47,5 @@ Accessibility: honours `prefers-reduced-motion` live, plus an on-page **Pause/Pl
 
 ## Before you submit
 - Each level is in its own folder/file as requested; the Codveda submission form hasn't been shared yet.
-- Push to GitHub (one repo or one per level) and deploy Level 2 (required by its brief) on Netlify/Vercel.
-- See `LINKEDIN_POSTS.md` for post drafts — use your real offer-letter/certificate and record the video yourself.
+- Push to GitHub (one repo or one per level) and deploy Level 2 (required by its brief) on Netlify.
+
