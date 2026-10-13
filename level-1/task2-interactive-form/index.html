@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Create account — Interactive Form</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script src="script.js" defer></script>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 16 16%27%3E%3Ccircle cx=%278%27 cy=%278%27 r=%277%27 fill=%27%236c8cff%27/%3E%3C/svg%3E" />
+</head>
+<body>
+  <main class="wrap">
+    <form id="signup" class="card" novalidate aria-labelledby="title">
+      <h1 id="title">Create your account</h1>
+      <p class="sub">Fields validate as you type.</p>
+
+      <div class="field" data-field="name">
+        <label for="name">Full name</label>
+        <input id="name" name="name" type="text" autocomplete="name" placeholder="Pragya Singh" aria-describedby="name-err" />
+        <p class="err" id="name-err" role="alert" aria-live="polite"></p>
+      </div>
+
+      <div class="field" data-field="email">
+        <label for="email">Email</label>
+        <input id="email" name="email" type="email" autocomplete="email" placeholder="you@example.com" aria-describedby="email-err" />
+        <p class="err" id="email-err" role="alert" aria-live="polite"></p>
+      </div>
+
+      <div class="field" data-field="phone">
+        <label for="phone">Phone number</label>
+        <input id="phone" name="phone" type="tel" autocomplete="tel" placeholder="+91 98765 43210" aria-describedby="phone-err" />
+        <p class="err" id="phone-err" role="alert" aria-live="polite"></p>
+      </div>
+
+      <div class="field" data-field="password">
+        <label for="password">Password</label>
+        <div class="pw">
+          <input id="password" name="password" type="password" autocomplete="new-password" aria-describedby="password-err strength-text" />
+          <button type="button" class="show" aria-label="Show password" aria-pressed="false">Show</button>
+        </div>
+        <div class="meter" aria-hidden="true"><span id="strength-bar"></span></div>
+        <p class="hint" id="strength-text">Use 8+ characters with upper, lower, number and symbol.</p>
+        <p class="err" id="password-err" role="alert" aria-live="polite"></p>
+      </div>
+
+      <div class="field" data-field="confirm">
+        <label for="confirm">Confirm password</label>
+        <input id="confirm" name="confirm" type="password" autocomplete="new-password" aria-describedby="confirm-err" />
+        <p class="err" id="confirm-err" role="alert" aria-live="polite"></p>
+      </div>
+
+      <button class="submit" type="submit">Sign up</button>
+      <p class="success" id="success" role="status" hidden></p>
+    </form>
+  </main>
+</body>
+</html>

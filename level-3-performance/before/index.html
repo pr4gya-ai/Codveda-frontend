@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Pulse — Focus tools for modern teams</title>
+  <meta name="description" content="Pulse helps teams plan, focus and ship faster. A responsive landing page built with semantic HTML, CSS Grid/Flexbox and vanilla JavaScript." />
+  <link rel="stylesheet" href="styles.css" />
+  <script src="script.js"></script>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 16 16%27%3E%3Ccircle cx=%278%27 cy=%278%27 r=%277%27 fill=%27%236c8cff%27/%3E%3C/svg%3E" />
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="site-header" id="top">
+    <nav class="nav container" aria-label="Primary">
+      <a class="logo" href="#top"><span class="logo-dot" aria-hidden="true"></span>Pulse</a>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="nav-links" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#features">Features</a></li>
+        <li><a href="#how">How it works</a></li>
+        <li><a href="#pricing">Pricing</a></li>
+        <li><a class="btn btn-small" href="#cta">Get started</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="hero container">
+      <div class="hero-copy reveal">
+        <p class="eyebrow">New · Team focus mode</p>
+        <h1>Plan less. <span class="grad">Ship more.</span></h1>
+        <p class="lead">Pulse turns scattered tasks into a calm, prioritised day, so your team spends time building instead of coordinating.</p>
+        <div class="hero-actions">
+          <a class="btn" href="#cta">Start free</a>
+          <a class="btn btn-ghost" href="#features">See features</a>
+        </div>
+        <ul class="stats" aria-label="Highlights">
+          <li><strong data-count="12000">0</strong><span>teams</span></li>
+          <li><strong data-count="98">0</strong><span>% uptime</span></li>
+          <li><strong data-count="4">0</strong><span>min setup</span></li>
+        </ul>
+      </div>
+      <div class="hero-visual reveal" aria-hidden="true">
+        <div class="card-stack">
+          <div class="mock mock-1"><i></i><b></b><b class="short"></b></div>
+          <div class="mock mock-2"><i></i><b></b><b class="short"></b></div>
+          <div class="mock mock-3"><i></i><b></b><b class="short"></b></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section container" id="features">
+      <h2 class="reveal">Everything your team needs</h2>
+      <p class="section-sub reveal">Three simple ideas, designed to stay out of your way.</p>
+      <div class="grid">
+        <article class="feature reveal">
+          <div class="icon" aria-hidden="true">⚡</div>
+          <h3>Instant capture</h3>
+          <p>Drop ideas in from anywhere. Pulse sorts and schedules them automatically.</p>
+        </article>
+        <article class="feature reveal">
+          <div class="icon" aria-hidden="true">🎯</div>
+          <h3>Focus mode</h3>
+          <p>One prioritised list per person, per day. No more guessing what matters.</p>
+        </article>
+        <article class="feature reveal">
+          <div class="icon" aria-hidden="true">📈</div>
+          <h3>Clear progress</h3>
+          <p>Live team progress without status meetings or spreadsheets.</p>
+        </article>
+        <article class="feature reveal">
+          <div class="icon" aria-hidden="true">🔒</div>
+          <h3>Private by default</h3>
+          <p>Granular permissions and encrypted storage keep work safe.</p>
+        </article>
+        <article class="feature reveal">
+          <div class="icon" aria-hidden="true">🔌</div>
+          <h3>Integrations</h3>
+          <p>Connect Slack, GitHub, Calendar and more in a couple of clicks.</p>
+        </article>
+        <article class="feature reveal">
+          <div class="icon" aria-hidden="true">📱</div>
+          <h3>Works everywhere</h3>
+          <p>Fully responsive on phone, tablet and desktop.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section alt" id="how">
+      <div class="container">
+        <h2 class="reveal">How it works</h2>
+        <ol class="steps">
+          <li class="reveal"><span>1</span><div><h3>Create a workspace</h3><p>Invite your team with a single link.</p></div></li>
+          <li class="reveal"><span>2</span><div><h3>Add your work</h3><p>Import tasks or capture them as they come.</p></div></li>
+          <li class="reveal"><span>3</span><div><h3>Focus and ship</h3><p>Follow your daily plan and watch progress climb.</p></div></li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="section container" id="gallery">
+      <h2>Made with Pulse</h2>
+      <div class="gallery">
+        <img src="img/photo1.png" alt="Abstract blue-green gradient" />
+        <img src="img/photo2.png" alt="Abstract purple-orange gradient" />
+        <img src="img/photo3.png" alt="Abstract teal-yellow gradient" />
+        <img src="img/photo4.png" alt="Abstract magenta-blue gradient" />
+      </div>
+    </section>
+
+    <section class="section container" id="pricing">
+      <h2 class="reveal">Simple pricing</h2>
+      <div class="grid pricing">
+        <article class="plan reveal"><h3>Starter</h3><p class="price">$0</p><ul><li>Up to 5 people</li><li>Core features</li></ul></article>
+        <article class="plan featured reveal"><h3>Team</h3><p class="price">$8<small>/user</small></p><ul><li>Unlimited people</li><li>Integrations</li><li>Priority support</li></ul></article>
+        <article class="plan reveal"><h3>Business</h3><p class="price">$16<small>/user</small></p><ul><li>SSO &amp; audit log</li><li>Advanced permissions</li></ul></article>
+      </div>
+    </section>
+
+    <section class="cta" id="cta">
+      <div class="container reveal">
+        <h2>Ready to find your rhythm?</h2>
+        <p>Join thousands of teams already shipping with Pulse.</p>
+        <a class="btn btn-light" href="#top">Create free workspace</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <p>© <span id="year"></span> Pulse. Built for the Codveda Front-End internship.</p>
+      <ul>
+        <li><a href="#features">Features</a></li>
+        <li><a href="#pricing">Pricing</a></li>
+        <li><a href="#top">Back to top</a></li>
+      </ul>
+    </div>
+  </footer>
+</body>
+</html>

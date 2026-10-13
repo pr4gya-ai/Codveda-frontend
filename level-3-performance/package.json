@@ -1,0 +1,19 @@
+{
+  "name": "codveda-level3-performance",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "serve:before": "node scripts/serve.mjs before 4001",
+    "serve:after": "node scripts/serve.mjs after 4002",
+    "lighthouse": "node scripts/lighthouse.mjs"
+  },
+  "devDependencies": {
+    "esbuild": "^0.24.0",
+    "html-minifier-terser": "^7.2.0",
+    "sharp": "^0.33.5",
+    "lighthouse": "^12.2.1",
+    "chrome-launcher": "^1.1.2"
+  }
+}

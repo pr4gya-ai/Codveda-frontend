@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Advanced GSAP animations: timeline intro, ScrollTrigger sections, magnetic hover — with reduced-motion support." />
+  <title>Orbit — Advanced GSAP Animations</title>
+  <link rel="stylesheet" href="/src/styles.css" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 16 16%27%3E%3Ccircle cx=%278%27 cy=%278%27 r=%277%27 fill=%27%236c8cff%27/%3E%3C/svg%3E" />
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <div class="progress" aria-hidden="true"><span id="progress"></span></div>
+
+  <header class="header">
+    <a class="logo" href="#top">Orbit<span>.</span></a>
+    <nav aria-label="Primary">
+      <a href="#work">Work</a><a href="#process">Process</a><a href="#stats">Stats</a><a href="#contact">Contact</a>
+    </nav>
+    <button id="motion-toggle" class="motion-toggle" aria-pressed="false">Pause motion</button>
+  </header>
+
+  <main id="main">
+    <section class="hero" id="top">
+      <div class="blob b1" aria-hidden="true"></div>
+      <div class="blob b2" aria-hidden="true"></div>
+      <p class="kicker">Creative front-end studio</p>
+      <h1 id="headline" aria-label="Motion that feels alive">
+        <span class="line"><span class="word">Motion</span> <span class="word">that</span></span>
+        <span class="line"><span class="word grad">feels</span> <span class="word grad">alive</span></span>
+      </h1>
+      <p class="sub">Timeline sequences, scroll-driven storytelling and tactile hover effects, built to stay smooth and accessible.</p>
+      <a class="btn magnetic" href="#work"><span>Explore the work</span></a>
+      <div class="scroll-cue" aria-hidden="true">Scroll</div>
+    </section>
+
+    <section class="work" id="work">
+      <h2 class="section-title">Selected work</h2>
+      <div class="cards">
+        <article class="card tilt" style="--hue:250"><h3>Nimbus</h3><p>Weather dashboard with fluid data transitions.</p></article>
+        <article class="card tilt" style="--hue:170"><h3>Verdant</h3><p>Plant-care app with delightful micro-interactions.</p></article>
+        <article class="card tilt" style="--hue:330"><h3>Pixelwave</h3><p>Music visualiser driven by scroll and sound.</p></article>
+        <article class="card tilt" style="--hue:30"><h3>Atlas</h3><p>Interactive map storytelling for travel brands.</p></article>
+      </div>
+    </section>
+
+    <section class="process" id="process">
+      <div class="pin">
+        <h2 class="section-title">Our process</h2>
+        <ol class="steps">
+          <li class="step"><span>01</span><h3>Discover</h3><p>We learn the product, the people and the story to tell.</p></li>
+          <li class="step"><span>02</span><h3>Choreograph</h3><p>Motion is storyboarded as timelines before a line of code.</p></li>
+          <li class="step"><span>03</span><h3>Build</h3><p>GSAP + transforms only, so everything stays on the GPU.</p></li>
+          <li class="step"><span>04</span><h3>Polish</h3><p>Tested for performance, keyboard use and reduced motion.</p></li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="stats" id="stats">
+      <div class="stat"><strong data-to="120">0</strong><span>projects shipped</span></div>
+      <div class="stat"><strong data-to="60">0</strong><span>fps, always</span></div>
+      <div class="stat"><strong data-to="98">0</strong><span>Lighthouse score</span></div>
+    </section>
+
+    <section class="contact" id="contact">
+      <h2 class="reveal-text">Let’s make something move.</h2>
+      <a class="btn magnetic" href="mailto:hello@example.com"><span>Say hello</span></a>
+    </section>
+  </main>
+
+  <footer class="footer">Built with GSAP · Codveda Front-End internship · Level 3</footer>
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>
