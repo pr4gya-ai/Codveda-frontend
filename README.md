@@ -13,6 +13,14 @@ Six tasks, two per level, each level in its own folder (the brief asks for a sep
 
 The Django task (Level 3, Task 1) was not chosen because it's a back-end task; the brief says to pick any two per level.
 
+## Live demos
+- **Source code (GitHub):** https://github.com/pr4gya-ai/Codveda-frontend
+- **Level 1 — Landing page:** https://pulse-landing-codveda.netlify.app/
+- **Level 1 — Interactive form:** https://signup-form-codveda.netlify.app/
+- **Level 2 — React SPA / DevFinder:** https://devfinder-codveda.netlify.app/
+- **Level 3 — Animations (GSAP):** https://orbit-animations-codveda.netlify.app/
+- **Level 3 — Performance (optimized build):** https://pulse-optimized-codveda.netlify.app/
+
 ## Level 1
 - **Landing page** — semantic HTML (`header/nav/main/section/article/footer`), CSS Grid + Flexbox, mobile-first with `640px` / `960px` breakpoints, smooth scrolling, IntersectionObserver reveal animations, count-up stats, accessible hamburger menu, `prefers-reduced-motion` support.
 - **Form** — name / email / phone / password / confirm; validation on blur and live on input (after first touch), password-strength meter, show/hide password, focus + blur styling, `aria-live` errors, success confirmation without page reload.
@@ -21,7 +29,7 @@ The Django task (Level 3, Task 1) was not chosen because it's a back-end task; t
 - Routes: Home, Explore, User profile (`/user/:username`), Favorites, About, Contact, 404 — all client-side, lazy-loaded per route, with a page-transition animation.
 - **State across pages:** `FavoritesContext` (React Context) persisted to `localStorage`; the navbar badge updates from any page.
 - **API:** GitHub REST (`/search/users`, `/users/:name`, `/users/:name/repos`) with `fetch`, **debounced search** (450 ms), `AbortController` to cancel stale requests, loading / empty / rate-limit / network-error states, sort option, search kept in the URL (`?q=`).
-- **Deploy:** `public/_redirects` (Netlify) and `vercel.json` provide the SPA fallback. Run `npm run build` and deploy `dist/`, or connect the repo to Netlify/Vercel.
+- **Deploy:** live on Netlify (base directory `level-2-react-spa`, build `npm run build`, publish `dist`). `public/_redirects` (Netlify) and `vercel.json` provide the SPA fallback so refreshing on `/explore` works.
   Note: unauthenticated GitHub API calls are limited to 60/hour per IP; the UI shows a clear message when that is hit.
 
 ## Level 3
@@ -32,6 +40,7 @@ The Django task (Level 3, Task 1) was not chosen because it's a back-end task; t
 - Critical CSS **inlined** (no render-blocking stylesheet request)
 - **Caching**: `_headers` (immutable, 1-year for hashed JS and images; revalidate for HTML); `scripts/serve.mjs` mirrors these plus gzip/brotli so before/after can be measured fairly
 - `npm run lighthouse` runs Lighthouse (mobile emulation, median of 3 runs) on both.
+- **Deployed:** the `after/` folder is published on Netlify (no build step; `_headers` applies the caching rules).
 
 | (localhost, Lighthouse mobile) | Score | FCP | LCP | TBT | CLS | Initial page weight |
 |---|---|---|---|---|---|---|
@@ -45,7 +54,9 @@ Lighthouse also caught a real layout-shift bug (count-up stats changing width); 
 GSAP + ScrollTrigger: intro **timeline** (staggered headline, button pop), scroll-scrubbed parallax + progress bar, staggered card entrances, a scrubbed timeline for the process steps, count-up numbers, **magnetic buttons** and **3D card tilt** on hover (`gsap.quickTo`, transform/opacity only → compositor-friendly).
 Accessibility: honours `prefers-reduced-motion` live, plus an on-page **Pause/Play motion** toggle; content is fully visible with motion off; focus styles and skip link included.
 
-## Before you submit
-- Each level is in its own folder/file as requested; the Codveda submission form hasn't been shared yet.
-- Push to GitHub (one repo or one per level) and deploy Level 2 (required by its brief) on Netlify.
-
+## Submission checklist
+- [x] Two tasks completed per level, each level in its own folder
+- [x] Code pushed to GitHub
+- [x] All five projects deployed on Netlify (links above)
+- [ ] Demo video recorded and posted on LinkedIn (tag @Codveda; #CodvedaProjects #CodvedaAchievements)
+- [ ] Submitted via the Codveda submission form (to be shared by Codveda)
